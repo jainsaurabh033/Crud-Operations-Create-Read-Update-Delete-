@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 app.get("/getUser/:id", (req, res) => {
   const id = req.params.id;
   UserModal.findById({ _id: id })
-    .then((users) => res.json(users))
+    .then((user) => res.json(user))
     .catch((err) => res.json(err));
 });
 
